@@ -1,0 +1,46 @@
+---
+- name: Copy multiple files
+  hosts: targeted_host
+  become: true
+
+  tasks:
+    - name: Copy multiple files to managed node
+      copy:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+      with_items: 
+        - { src: /path/to/source_1/, dest: /path/to/destination_1 }
+        - { src: /path/to/source_2/, dest: /path/to/destination_2 }
+      register: copy_result
+    - name: Check If copy was successful
+      debug:
+        msg: "Files from {{ item.src }} copied to {{ inventory_hostname}}"
+      when: copy_result.rc == 0
+
+---
+- name: Playbook with Handler
+  hosts: targeted_host
+  become: true
+
+  tasks:
+   - name: config placed
+     copy:
+      src: /path/to/config
+      dest: /etc/exampleapp/config
+     notify: Restart ExampleApp
+  
+   - name: Ensure Service is running
+     service:
+      name: exampleapp
+      state: started
+     notify: Reload ExampleApp
+
+  handlers:
+    - name: Restart ExampleApp
+      service:
+        name: exampleapp
+        state: restarted
+    - name: Reload ExampleApp
+      service:
+        name: exampleapp
+        state: reloaded
