@@ -260,3 +260,4 @@ To create an Ansible playbook that copies files using roles, you'll first need t
    Replace `playbook.yml` with the actual filename of your playbook. This command will execute the playbook and, in turn, run the role, which copies files from the control node to the managed nodes.
 
 Make sure that you have the necessary permissions and SSH access to copy files to the managed nodes. This playbook structure allows for easy reuse of the role in other playbooks and scenarios where file copying is required.
+
