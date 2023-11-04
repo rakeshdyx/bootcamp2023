@@ -29,3 +29,28 @@
     - Releases - Ensuring all software development life cycle (SDLC) and Release processes are followed and take proactive actions as and when necessary
     - Design and implement automated security controls and testing tools to detect and prevent security vulnerabilities in our applications and infrastructure.
     - Collaborate with development and operations teams to integrate security into the software development lifecycle
+
+### Requirement 3
+
+- Problem Solving/Debugging skills
+- Azure VMs, Containers, Functions, Microservices, Automation/Orchestration, Networking/Content Delivery, Database, etc
+- K8 YAML
+- Azure serverless compute, Data technologies, Azure managed services viz API Management, App Gateway, Azure Monitor, Azure batch, etc. and PaaS, IaaS offering
+- Kubernetes, OpenShift, AKS
+
+- messaging
+- streaming
+- IoT
+- component integration
+- stateless & stateful sets
+- disaster recovery, high availability, and other technologies and principles that support business continuity
+- experience with DR capabilities in Azure and/or virtualized environments
+- Agile methodology is highly desirable
+- GitOps technologies(ArgoCD) to implement continuous deployments
+- CI/CD pipelines using Jenkins/GitHub Actions/Argo
+- Grafana, Prometheus, ELK etc.
+- AD
+- Security patches and remediate vulnerabilities in the entire stack
+- security standards and technical design
+- monitor cloud infrastructure/services on Azure/OpenShift PaaS
+- Linux, Bash, PowerShell, Terraform, Autoscaling, Ansible
